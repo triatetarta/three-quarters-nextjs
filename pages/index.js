@@ -17,6 +17,18 @@ export default function Home() {
       </Head>
 
       <Layout>
+        <>
+          <div className='fixed top-0 left-0 right-0 bottom-0 w-full h-full'>
+            <video
+              className='z-30 object-cover w-full h-full'
+              src='/vids/coding.mp4'
+              autoPlay
+              muted
+              loop
+            />
+          </div>
+          <div className='bg-dark-gray/20 fixed top-0 left-0 right-0 bottom-0 w-full h-full'></div>
+        </>
         <div className='container min-h-[calc(100vh-15rem)] relative flex items-center'>
           {/* <div
             className='bg-clr-white w-full absolute left-0 right-0 top-0 bottom-0 z-30'
@@ -53,15 +65,6 @@ export default function Home() {
             <div className='h-10'>
               <h3 className='text-xl'>{showcase.title}</h3>
             </div>
-          </div>
-          <div className='w-2/3 py-2 '>
-            <video
-              className='z-30 rounded-lg'
-              src='/vids/coding.mp4'
-              autoPlay
-              muted
-              loop
-            />
           </div>
 
           {/* </div> */}

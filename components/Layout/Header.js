@@ -14,7 +14,10 @@ const Header = () => {
   return (
     <nav className='container py-6 relative'>
       <div className='flex items-center justify-between'>
-        <div onClick={() => router.push("/")} className='w-28 relative'>
+        <div
+          onClick={() => router.push("/")}
+          className='w-28 relative z-40 cursor-pointer'
+        >
           <Logo className='object-contain' />
         </div>
         <motion.div
