@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { setMenuToggle } from "./LayoutSlice/reducer";
 import Menu from "./Menu";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config";
+import { logoIcon } from "../../seeders/data";
+
+const twConfig = resolveConfig(tailwindConfig);
 
 const Header = () => {
   const { menuOpen } = useSelector((state) => state.layout);
@@ -18,8 +23,9 @@ const Header = () => {
           onClick={() => router.push("/")}
           className='w-28 relative z-40 cursor-pointer'
         >
-          <Logo className='object-contain' />
+          <span className='object-contain'>{logoIcon()}</span>
         </div>
+
         <motion.div
           className='relative'
           layout
@@ -34,7 +40,7 @@ const Header = () => {
                   className='h-6 w-6'
                   fill='none'
                   viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  stroke={twConfig.theme.colors["primary-menu"]}
                   strokeWidth='2'
                 >
                   <path
@@ -49,7 +55,7 @@ const Header = () => {
                   className='h-6 w-6'
                   fill='none'
                   viewBox='0 0 24 24'
-                  stroke='currentColor'
+                  stroke={twConfig.theme.colors["primary-menu"]}
                   strokeWidth='2'
                 >
                   <path

@@ -1,6 +1,10 @@
 import Head from "next/head";
 import { useSelector } from "react-redux";
 import { Layout } from "../components/Layout/";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../tailwind.config";
+
+const twConfig = resolveConfig(tailwindConfig);
 
 export default function Home() {
   const { showcase } = useSelector((state) => state.layout);
@@ -44,22 +48,23 @@ export default function Home() {
                 )}
               </div>
               <div className='bg-dark-gray w-10 h-10'>
-                {showcase.icon && (
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='h-10 w-10'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='white'
-                    strokeWidth='2'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      d='M17 8l4 4m0 0l-4 4m4-4H3'
-                    />
-                  </svg>
-                )}
+                {showcase.icon &&
+                  +(
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      className='h-10 w-10'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='white'
+                      strokeWidth='2'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        d='M17 8l4 4m0 0l-4 4m4-4H3'
+                      />
+                    </svg>
+                  )}
               </div>
             </div>
             <div className='h-10'>

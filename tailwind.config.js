@@ -22,7 +22,8 @@ module.exports = {
       colors: {
         "primary-1": "#5c43f5",
         "primary-2": "#705df2",
-        "primary-blue": "#0808ff",
+        "primary-footer": "#0808ff",
+        "primary-menu": "#07ff00",
         "btn-dark": "#272727",
         "clr-white": "#fff",
         "clr-black": "#1a1a1a",

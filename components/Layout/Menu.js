@@ -36,11 +36,7 @@ const Menu = () => {
             >
               <span className='block absolute top-0 left-0 w-full h-full bg-clr-white/5 transform scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left will-change-transform transition-transform duration-500 ease-in-button-out'></span>
 
-              <img
-                className='w-10 h-10 text-clr-white'
-                src={item.icon}
-                alt={item.title}
-              />
+              <div className='w-10 h-10'>{item.icon}</div>
             </button>
           );
         })}

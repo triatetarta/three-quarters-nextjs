@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='container flex items-center justify-between py-6'>
+    <footer className='text-primary-footer container flex items-center justify-between py-6'>
       <ul>
         <li>Projects</li>
         <li>Skills</li>
@@ -9,8 +9,8 @@ const Footer = () => {
       </ul>
 
       <ul className='text-right'>
-        <li className='text-light-gray'>
-          <span className='border-b border-light-gray'>
+        <li>
+          <span className='border-b border-primary-footer'>
             Dimitrios Chatziioannou
           </span>
         </li>
